@@ -1,5 +1,5 @@
-const showAllArgs = (...args) => {
+function showAllArgs(...args) {
   console.log(args);
-};
+}
 
-showAllArgs('Moon', 'Mercury', 'Mars', 'Jupiter', 'Venus');
+showAllArgs("Moon", "Mercury", "Mars", "Jupiter", "Venus");
