@@ -1,10 +1,16 @@
-interface User { id: unknown }
-type NewUser = User & { id: string };
-type OldUser = User & { id: number };
-interface Book { isbn: string }
+{
+  interface User {
+    id: unknown;
+  }
+  type NewUser = User & { id: string };
+  type OldUser = User & { id: number };
+  interface Book {
+    isbn: string;
+  }
 
-type IdOf<T> = T extends User ? T['id'] : never;
+  type IdOf<T> = T extends User ? T["id"] : never;
 
-type NewUserId = IdOf<NewUser>;
-type OldUserId = IdOf<OldUser>;
-type BookId = IdOf<Book>;
+  type NewUserId = IdOf<NewUser>;
+  type OldUserId = IdOf<OldUser>;
+  type BookId = IdOf<Book>;
+}

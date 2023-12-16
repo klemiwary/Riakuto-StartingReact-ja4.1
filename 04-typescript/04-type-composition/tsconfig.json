@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "commonjs",
+    "target": "ES5",
+    "module": "CommonJS",
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": true,
-    "skipLibCheck": true,
+    "skipLibCheck": true
   }
 }
