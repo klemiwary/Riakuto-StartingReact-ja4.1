@@ -1,5 +1,5 @@
 {
-  "name": "vite-app",
+  "name": "preact-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,15 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@preact/signals": "^1.2.2",
+    "preact": "^10.19.6"
   },
   "devDependencies": {
+    "@preact/preset-vite": "^2.8.1",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
-    "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.56.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
