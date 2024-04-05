@@ -2,7 +2,7 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
-const App: React.FC = () => {
+function App() {
   return (
     <>
       <div>
@@ -16,6 +16,6 @@ const App: React.FC = () => {
       <h1>Hello, World!</h1>
     </>
   );
-};
+}
 
 export default App;

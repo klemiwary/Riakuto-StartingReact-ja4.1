@@ -1,6 +1,9 @@
-type Props = { name: string; times?: number };
+interface Props {
+  name: string;
+  times?: number;
+}
 
-const Greet: React.FC<Props> = (props) => {
+function Greet(props: Props) {
   const { name, times = 1 } = props;
 
   return (
@@ -10,6 +13,6 @@ const Greet: React.FC<Props> = (props) => {
       ))}
     </>
   );
-};
+}
 
 export default Greet;

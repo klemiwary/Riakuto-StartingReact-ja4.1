@@ -1,6 +1,6 @@
 import './App.css';
 
-const App: React.FC = () => {
+function App() {
   const name = 'Patty';
   const greet = (name: string) => <p>Hello, {name || 'Guest'}!</p>;
 
@@ -58,6 +58,6 @@ const App: React.FC = () => {
       {elems}
     </>
   );
-};
+}
 
 export default App;

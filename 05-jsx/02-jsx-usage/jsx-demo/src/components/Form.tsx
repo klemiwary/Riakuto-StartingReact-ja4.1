@@ -10,21 +10,25 @@ const options = {
 
 type Props = { selected?: keyof typeof options };
 
-const Form: React.FC<Props> = ({ selected }) => (
-  <form>
-    <div className="form-item">
-      <label htmlFor="favChar">好きなキャラクターは？</label>
-      <select id="favChar" value={selected}>
-        {Object.entries(options).map(([species, name]) => (
-          <option value={species}>{name}</option>
-        ))}
-      </select>
-    </div>
-    <div>
-      <label htmlFor="favReason">そのキャラクターのどこが好き？</label>
-      <textarea id="favReason" value="【例】性格が好き" />
-    </div>
-  </form>
-);
+function Form(props: Props) {
+  const { selected } = props;
+
+  return (
+    <form>
+      <div className="form-item">
+        <label htmlFor="favChar">好きなキャラクターは？</label>
+        <select id="favChar" value={selected}>
+          {Object.entries(options).map(([species, name]) => (
+            <option value={species}>{name}</option>
+          ))}
+        </select>
+      </div>
+      <div>
+        <label htmlFor="favReason">そのキャラクターのどこが好き？</label>
+        <textarea id="favReason" value="【例】性格が好き" />
+      </div>
+    </form>
+  );
+}
 
 export default Form;

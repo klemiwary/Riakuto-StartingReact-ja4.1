@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import './TextInput.css';
 
-const TextInput: React.FC = () => {
+function TextInput() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleClick = () => {
@@ -14,6 +14,6 @@ const TextInput: React.FC = () => {
       <input type="button" value="フォーカス" onClick={handleClick} />
     </div>
   );
-};
+}
 
 export default TextInput;

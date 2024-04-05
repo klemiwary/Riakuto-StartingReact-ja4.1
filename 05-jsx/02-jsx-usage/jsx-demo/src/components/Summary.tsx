@@ -1,8 +1,12 @@
 import './Summary.css';
 
-type Props = { title: string; folded?: boolean } & React.PropsWithChildren;
+interface Props {
+  title: string;
+  folded?: boolean;
+  children: React.ReactNode;
+}
 
-const Summary: React.FC<Props> = ({ title, folded = false, children }) => {
+function Summary({ title, folded = false, children }: Props) {
   console.log(children);
 
   return (
@@ -11,6 +15,6 @@ const Summary: React.FC<Props> = ({ title, folded = false, children }) => {
       {children}
     </details>
   );
-};
+}
 
 export default Summary;
