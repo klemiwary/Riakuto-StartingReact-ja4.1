@@ -1,5 +1,5 @@
 {
-  "name": "jsx-demo",
+  "name": "01-props",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mantine/core": "^7.7.1",
+    "@mantine/hooks": "^7.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

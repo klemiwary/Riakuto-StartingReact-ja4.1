@@ -16,14 +16,12 @@ interface Character {
   height?: number;
 }
 
-type Props = {
+interface Props {
   school: string;
   characters: Character[];
-};
+}
 
-export default function CharacterList(props: Props) {
-  const { school, characters } = props;
-
+function CharacterList({ school, characters }: Props) {
   return (
     <div>
       <Title order={2}>{school}</Title>
@@ -37,7 +35,7 @@ export default function CharacterList(props: Props) {
                 <Text span display="flex">
                   {character.grade}年生
                   <Space w="xs" />
-                  {character.height ? character.height : '???'}cm
+                  {character.height ?? '???'}cm
                 </Text>
               </Box>
             </Flex>
@@ -47,3 +45,5 @@ export default function CharacterList(props: Props) {
     </div>
   );
 }
+
+export default CharacterList;

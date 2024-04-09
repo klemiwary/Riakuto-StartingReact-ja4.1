@@ -2,7 +2,7 @@ import { Title } from '@mantine/core';
 import CharacterList from './components/CharacterList.tsx';
 import './App.css';
 
-const characters = [
+const members = [
   {
     id: 1,
     name: '桜木花道',
@@ -34,13 +34,15 @@ const characters = [
   },
 ];
 
-export default function App() {
+function App() {
   return (
     <div>
       <Title order={1} my="xl">
         『SLAM DUNK』登場人物
       </Title>
-      <CharacterList school="湘北高校" characters={characters} />
+      <CharacterList school="湘北高校" characters={members} />
     </div>
   );
 }
+
+export default App;
