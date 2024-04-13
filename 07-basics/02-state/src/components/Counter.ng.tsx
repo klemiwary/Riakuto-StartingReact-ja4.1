@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { Button, Group, Card, Text } from '@mantine/core';
 
+const range = (n: number) => [...Array(n).keys()];
+
 function Counter() {
   const [count, setCount] = useState(0);
 
   function increment() {
-    setCount((c) => c + 1);
+    range(3).forEach(() => setCount(count + 1));
+    // range(3).forEach(() => setCount((c) => c + 1));
   }
 
   function reset() {
@@ -22,7 +25,7 @@ function Counter() {
       </Card.Section>
       <Group align="center" m="md" mb={6} gap={5}>
         <Button size="sm" w={140} color="teal.7" onClick={increment}>
-          +1
+          +3
         </Button>
         <Button size="sm" w={140} color="red.7" onClick={reset}>
           Reset
