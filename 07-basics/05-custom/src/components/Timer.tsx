@@ -1,33 +1,14 @@
-import { useEffect, useState } from 'react';
 import { Button, Card, Text } from '@mantine/core';
 import { IconRotate } from '@tabler/icons-react';
+import { useTimer } from '../hooks/useTimer.ts';
 
-type Props = { maxCount?: number };
+interface Props {
+  maxCount?: number;
+}
 const MAX_COUNT = 60;
 
 function Timer({ maxCount = MAX_COUNT }: Props) {
-  const [countLeft, setCountLeft] = useState(maxCount);
-
-  function tick() {
-    setCountLeft((c) => c - 1);
-  }
-
-  function reset() {
-    setCountLeft(maxCount);
-  }
-
-  useEffect(() => {
-    const timerId = setInterval(tick, 1000);
-
-    return () => clearInterval(timerId);
-  }, []);
-
-  useEffect(() => {
-    if (countLeft === 0) {
-      setCountLeft(maxCount);
-    }
-  });
-  // }, [countLeft, maxCount]);
+  const [countLeft, reset] = useTimer(maxCount);
 
   return (
     <Card px={40} py={20} radius="md" shadow="md" withBorder>
