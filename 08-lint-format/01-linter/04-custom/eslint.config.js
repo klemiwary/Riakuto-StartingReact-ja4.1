@@ -133,10 +133,8 @@ export default [
     },
   },
   { files: ['**/*.{ts,tsx,mts,cts,js,jsx,mjs,cjs}'] },
-  { ignores: ['**/dist/**', '.*rc.*', '*.config.*'] },
+  { ignores: ['**/dist/**', '**/public/**', '**/.*rc.*', '**/*.config.*'] },
   pluginJs.configs.recommended,
-  // SEE: https://typescript-eslint.io/users/configs/
-  // ...tsEsLint.configs.recommended,
   ...tsEsLint.configs.recommendedTypeChecked,
   ...tsEsLint.configs.stylistic,
   reactConfig,

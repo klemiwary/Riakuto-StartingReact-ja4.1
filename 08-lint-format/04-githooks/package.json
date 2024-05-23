@@ -6,15 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "fix": "pnpm run --silent --parallel '/(lint:fix|format)/'",
+    "fix": "pnpm run --parallel '/(lint:fix|format)/'",
     "format": "prettier --write --ignore-unknown --log-level=warn '**/!(*.min|*-lock).{js,mjs,cjs,jsx,ts,tsx,html,css,scss,sass,less,json,jsonc,yaml,yml,graphql,gql}'",
-    "lint": "pnpm run --silent --parallel '/lint:(?!.*fix).+$/'",
-    "lint:fix": "pnpm run --silent --parallel '/lint:.*:fix$/'",
+    "lint": "pnpm run --parallel '/lint:(?!.*fix).+$/'",
+    "lint:fix": "pnpm run --parallel '/lint:.*:fix$/'",
     "lint:es": "eslint . --report-unused-disable-directives --max-warnings=0",
     "lint:es:fix": "eslint . --fix --report-unused-disable-directives --max-warnings=0",
     "lint:style": "stylelint 'src/**/*.{css,scss,sass,less}' --max-warnings=0",
     "lint:style:fix": "stylelint 'src/**/*.{css,scss,sass,less}' --fix --max-warnings=0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "preinstall": "pnpx typesync || :",
+    "prepare": "pnpm exec lefthook install"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -41,6 +43,7 @@
     "eslint-plugin-simple-import-sort": "^12.1.0",
     "eslint-plugin-unused-imports": "^3.2.0",
     "globals": "^15.1.0",
+    "lefthook": "^1.6.12",
     "prettier": "^3.2.5",
     "stylelint": "^16.5.0",
     "stylelint-config-recess-order": "^5.0.1",

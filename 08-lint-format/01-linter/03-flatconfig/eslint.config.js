@@ -39,7 +39,7 @@ export default [
     },
   },
   { files: ['**/*.{ts,tsx,mts,cts,js,jsx,mjs,cjs}'] },
-  { ignores: ['**/dist/**', '.eslintrc.*', 'eslint.config.*'] },
+  { ignores: ['**/dist/**', '**/public/**', '**/.*rc.*', '**/*.config.*'] },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   reactConfig,
