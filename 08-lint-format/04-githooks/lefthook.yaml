@@ -1,9 +1,9 @@
 pre-commit:
-  # parallel: true
+  parallel: true
   commands:
     eslint:
       glob: '*.{ts,tsx,mts,cts,js,jsx,mjs,cjs}'
-      run: pnpm exec eslint {staged_files} --fix --quiet --max-warnings=0
+      run: pnpm exec eslint {staged_files} --fix --quiet --max-warnings=0 --no-warn-ignored
       stage_fixed: true
     stylelint:
       glob: 'src/**/*.{css,scss,sass,less}'

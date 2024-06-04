@@ -1,5 +1,5 @@
 pre-commit:
-  # parallel: true
+  parallel: true
   commands:
     eslint:
       glob: '*.{ts,tsx,mts,cts,js,jsx,mjs,cjs}'
