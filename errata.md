@@ -20,16 +20,35 @@
 
 ## 【① 言語・環境編】
 
-現在のところ、修正箇所はありません。
+- 2-9-1 / p.103 / 注釈 115
 
-<br />
+```diff
+- https://github.com/klemiwary/Riakuto-StartingReact-ja4.0/blob/main/01-hello/02-vite/hello-world
++ https://github.com/klemiwary/Riakuto-StartingReact-ja4.1/blob/main/01-hello/02-vite/hello-world
+```
 
-## 【② React 基礎編】
+- 3-2-2 / p.118
 
-現在のところ、修正箇所はありません。
+```diff
+- まず Array オブジェクのプロトタイプメソッドの中から
++ まず Array オブジェクトのプロトタイプメソッドの中から
+```
 
-<br />
+- 3-4-3 / p.141
 
-## 【③ React 応用編】
+```diff
+- その代表的なものが `Promse.all()`。引数に Promise オブジェクトの配列を渡すと
++ その代表的なものが `Promise.all()`。引数に Promise オブジェクトの配列を渡すと
+```
 
-現在のところ、修正箇所はありません。
+```diff
+- 実行され、それぞれの `resolove()` が返した値が格納された値が出力される。
++ 実行され、それぞれの `resolve()` が返した値が格納された値が出力される。
+```
+
+- 3-4-3 / p.145
+
+```diff
+- そして当然のように `catch` 文が捕捉したもの種類を関知しない。
++ そして当然のように `catch` 文が捕捉したものの種類を関知しない。
+```
